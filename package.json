@@ -1,0 +1,25 @@
+{
+  "name": "dk-fs",
+  "version": "0.1.0",
+  "description": "extendsion to node filesystem",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkvirus/dk-fs.git"
+  },
+  "keywords": [
+    "fs"
+  ],
+  "author": "dkvirus",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dkvirus/dk-fs/issues"
+  },
+  "homepage": "https://github.com/dkvirus/dk-fs#readme"
+}
