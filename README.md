@@ -2,6 +2,26 @@
 对 node 提供的原生 fs 包进行扩展。
 
 
+# 一、安装
+
+`dk-fs` 为第三方包，使用前需要先进行安装。
+
+```
+$ npm install dk-fs
+```
+
+# 二、用法
+
+```
+// index.js
+const fs2 = require('dk-fs');
+const path = require('path');
+
+const src = path.join(process.cwd(), 'package.json');
+const dest = path.join(process.cwd(), 'demo');
+fs2.copyFile(src, dest);
+```
+
 ### 1. 复制文件
 
 - `copyFile(src, dest, isreplace)`：复制文件，不光是文本文件，还可以复制图片，视频，压缩包等。
