@@ -24,4 +24,18 @@
     
 二者区别见下图：
 
+```
+原始目录结构                        复制子文件                                      复制本身
+                    （将 folder 1 的子文件复制到 folder 2 下）        （将 folder 1 本身都复制到 folder 2 下）
+- folder 1                      - folder 1                                      - folder 1                    
+    + folder 1-1                    + folder 1-1                                    + folder 1-1
+    + folder 1-2                    + folder 1-2                                    + folder 1-2
+- folder 2                      - folder 2                                      - folder 2
+    + folder 2-1                    + folder 2-1                                    + folder 2-1    
+    + folder 2-2                    + folder 2-2                                    + folder 2-2
+                                    + folder 1-1                                    - folder 1
+                                    + folder 1-2                                        + folder 1-1
+                                                                                        + folder 1-2    
+```
+
 ![copy type](assets/copytype.png)
