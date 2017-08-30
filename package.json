@@ -1,6 +1,6 @@
 {
   "name": "dk-fs",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "extendsion to node filesystem",
   "main": "index.js",
   "directories": {
@@ -16,6 +16,9 @@
   "keywords": [
     "fs"
   ],
+  "engine": {
+	"node": ">=6.9.5"
+  },
   "author": "dkvirus",
   "license": "ISC",
   "bugs": {
