@@ -32,12 +32,12 @@ fs2.copyFile(src, dest);
 
 ### 2. 复制文件夹
 
-- `copyself(src, dest)`：复制文件夹自身到目标文件夹。
+- `copyDirSelf(src, dest)`：复制文件夹自身到目标文件夹。
 
     - `src` 源文件夹绝对路径；
     - `dest` 目标文件夹绝对路径。
     
-- `copychildren(src, dest)`：复制源文件夹子文件到目标文件夹。
+- `copyDirChild(src, dest)`：复制源文件夹子文件到目标文件夹。
 
     - `src` 源文件夹绝对路径；
     - `dest` 目标文件夹绝对路径。
@@ -47,6 +47,7 @@ fs2.copyFile(src, dest);
 ```
 原始目录结构                        复制子文件                                      复制本身
                     （将 folder 1 的子文件复制到 folder 2 下）        （将 folder 1 本身都复制到 folder 2 下）
+                    
 - folder 1                      - folder 1                                      - folder 1                    
     + folder 1-1                    + folder 1-1                                    + folder 1-1
     + folder 1-2                    + folder 1-2                                    + folder 1-2
@@ -59,3 +60,64 @@ fs2.copyFile(src, dest);
 ```
 
 ![copy type](assets/copytype.png)
+
+### 3. 删除文件夹
+
+> fs 提供的 rmdir() 只能删除空文件夹，这里提供的几个方法不论文件夹内是否有子文件，一律删除，使用需谨慎。
+
+- `delDirSelf(src)`：删除文件夹自身。
+
+    - `src` 要删除的那个文件夹绝对路径。
+
+- `delDirChild(src)`：删除文件夹的子目录，不包括自身。
+
+    - `src` 要删除的那个文件夹绝对路径。
+    
+二者区别如下图：
+
+```
+原始目录结构                           删除文件夹（folder 2）子目录                      删除文件夹（folder 2）自身
+
+- folder 1                          - folder 1                                      - folder 1    
+    + folder 1-1                        + folder 1-1                                    + folder 1-1    
+    + folder 1-2                        + folder 1-2                                    + folder 1-2
+- folder 2                          + folder 2
+    + folder 2-1
+    + folder 2-2
+```
+
+### 4. 遇空则删
+- `delEmpty(src)`：删除文件或文件夹，删除之后如果上一级目录的子目录为空，递归删除上一级直到子目录不为空。
+
+    - `src` 要删除的那个文件或文件夹的绝对路径。 
+
+该方法意思表示如下：
+
+```
+原始目录结构                            删除操作第一阶段                            删除操作第二阶段                    
+                                    （删除 file 2-2-1 文件）                （file 2-2-1 父级目录 folder 2-2为空目录，删除）
+                                                                （folder 2-2 父级目录 folder 2 下有 folder 2-1，不是空目录，删除操作停止）
+                                                                
+- folder 1                              - folder 1                                  - folder 1  
+    + folder 1-1                            + folder 1-1                                + folder 1-1
+    + folder 1-2                            + folder 1-2                                + folder 1-2
+- folder 2                              - folder 2                                  - folder 2
+    + folder 2-1                            + folder 2-1                                + folder 2-1
+    - folder 2-2                            + folder 2-2
+        + file 2-2-1
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
