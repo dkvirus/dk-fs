@@ -3,8 +3,8 @@
  * $ node demo/copyDirChild.demo.js
  */
 
-const fs2 = require('../lib');
 const path = require('path');
+const fs2 = require('../index');
 
 const src = path.join(process.cwd(), 'assets');
 const dest = path.join(process.cwd(), 'demo');

@@ -3,8 +3,8 @@
  * $ node demo/copyFile.demo.js
  */
 
-const fs2 = require('../lib');
 const path = require('path');
+const fs2 = require('../index');
 
 const src = path.join(process.cwd(), 'assets/copytype.png');
 const dest = path.join(process.cwd(), 'demo');

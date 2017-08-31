@@ -3,8 +3,8 @@
  * $ node demo/isEmptyDir.demo.js
  */
 
-const fs2 = require('../lib');
 const path = require('path');
+const fs2 = require('../index');
 
 /**
  * 判断文件夹是否为空目录

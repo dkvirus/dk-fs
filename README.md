@@ -107,6 +107,13 @@ fs2.copyFile(src, dest);
         + file 2-2-1
 ```
 
+### 5. 判断是否为空文件夹
+- `isEmptyDir(src)`
+
+    - `src`：待判断目录绝对路径。
+    
+
+
 
 
 
