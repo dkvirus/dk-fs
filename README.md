@@ -1,6 +1,6 @@
 # dk-fs
 对 node 提供的原生 fs 包进行扩展。
-
+[更新日志](https://github.com/dkvirus/dk-fs/wiki/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97)
 
 # 一、安装
 
