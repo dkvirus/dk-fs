@@ -5,6 +5,7 @@ const delDirChild = require('./lib/delDirChild');
 const delDirSelf = require('./lib/delDirSelf');
 const delEmpty = require('./lib/delEmpty');
 const isEmptyDir = require('./lib/isEmptyDir');
+const mkdir = require('./lib/mkdir');
 
 module.exports = {
     copyFile,
@@ -13,5 +14,6 @@ module.exports = {
     delDirChild,
     delDirSelf,
     delEmpty,
-    isEmptyDir
+    isEmptyDir,
+    mkdir
 };

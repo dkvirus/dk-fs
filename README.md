@@ -113,7 +113,17 @@ fs2.copyFile(src, dest);
 - `isEmptyDir(src)`
 
     - `src`：待判断目录绝对路径。
-    
+
+### 6. 递归生成空文件夹
+- `mkdir(src)`
+
+    - `src`：要生成那个文件夹的绝对路径。
+
+注意事项：
+
+    创建 aaa/bbb 文件夹，使用原生 fs 的 mkdir() 方法创建，如果 aaa 目录不存在，会直接报错；
+
+    使用 dk-fs 的 mkdir() 方法创建，会先找 bbb 目录的上级目录 aaa，如果不存在先创建 aaa 目录再创建 bbb 目录。
 
 
 
