@@ -1,6 +1,6 @@
 {
   "name": "dk-fs",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "extendsion to node filesystem",
   "main": "index.js",
   "directories": {
